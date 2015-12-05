@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IniciarSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciarSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IniciarSesionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerSectores">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerSectoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerSectoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDenuncias">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerDenunciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDenunciasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bloquearDenuncia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bloquearDenunciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bloquearDenunciaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bloquearVideo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bloquearVideoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bloquearVideoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cambiarContrasena">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usern" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pactual" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pn1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pn2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cambiarContrasenaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cambiarContrasenaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerReporteDenuncia">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerReporteDenunciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerReporteDenunciaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerReporteVideos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerReporteVideosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerReporteVideosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IniciarSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:IniciarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IniciarSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSectoresSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerSectores" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSectoresSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerSectoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDenunciasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDenuncias" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDenunciasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDenunciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="bloquearDenunciaSoapIn">
+    <wsdl:part name="parameters" element="tns:bloquearDenuncia" />
+  </wsdl:message>
+  <wsdl:message name="bloquearDenunciaSoapOut">
+    <wsdl:part name="parameters" element="tns:bloquearDenunciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="bloquearVideoSoapIn">
+    <wsdl:part name="parameters" element="tns:bloquearVideo" />
+  </wsdl:message>
+  <wsdl:message name="bloquearVideoSoapOut">
+    <wsdl:part name="parameters" element="tns:bloquearVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cambiarContrasenaSoapIn">
+    <wsdl:part name="parameters" element="tns:cambiarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="cambiarContrasenaSoapOut">
+    <wsdl:part name="parameters" element="tns:cambiarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerReporteDenunciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerReporteDenuncia" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerReporteDenunciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerReporteDenunciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerReporteVideosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerReporteVideos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerReporteVideosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerReporteVideosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiciosWebSoap">
+    <wsdl:operation name="IniciarSesion">
+      <wsdl:input message="tns:IniciarSesionSoapIn" />
+      <wsdl:output message="tns:IniciarSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSectores">
+      <wsdl:input message="tns:ObtenerSectoresSoapIn" />
+      <wsdl:output message="tns:ObtenerSectoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDenuncias">
+      <wsdl:input message="tns:ObtenerDenunciasSoapIn" />
+      <wsdl:output message="tns:ObtenerDenunciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bloquearDenuncia">
+      <wsdl:input message="tns:bloquearDenunciaSoapIn" />
+      <wsdl:output message="tns:bloquearDenunciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bloquearVideo">
+      <wsdl:input message="tns:bloquearVideoSoapIn" />
+      <wsdl:output message="tns:bloquearVideoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cambiarContrasena">
+      <wsdl:input message="tns:cambiarContrasenaSoapIn" />
+      <wsdl:output message="tns:cambiarContrasenaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReporteDenuncia">
+      <wsdl:input message="tns:ObtenerReporteDenunciaSoapIn" />
+      <wsdl:output message="tns:ObtenerReporteDenunciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReporteVideos">
+      <wsdl:input message="tns:ObtenerReporteVideosSoapIn" />
+      <wsdl:output message="tns:ObtenerReporteVideosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiciosWebSoap" type="tns:ServiciosWebSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IniciarSesion">
+      <soap:operation soapAction="http://tempuri.org/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSectores">
+      <soap:operation soapAction="http://tempuri.org/ObtenerSectores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDenuncias">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDenuncias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloquearDenuncia">
+      <soap:operation soapAction="http://tempuri.org/bloquearDenuncia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloquearVideo">
+      <soap:operation soapAction="http://tempuri.org/bloquearVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarContrasena">
+      <soap:operation soapAction="http://tempuri.org/cambiarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReporteDenuncia">
+      <soap:operation soapAction="http://tempuri.org/ObtenerReporteDenuncia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReporteVideos">
+      <soap:operation soapAction="http://tempuri.org/ObtenerReporteVideos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiciosWebSoap12" type="tns:ServiciosWebSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IniciarSesion">
+      <soap12:operation soapAction="http://tempuri.org/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSectores">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerSectores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDenuncias">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDenuncias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloquearDenuncia">
+      <soap12:operation soapAction="http://tempuri.org/bloquearDenuncia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloquearVideo">
+      <soap12:operation soapAction="http://tempuri.org/bloquearVideo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarContrasena">
+      <soap12:operation soapAction="http://tempuri.org/cambiarContrasena" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReporteDenuncia">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerReporteDenuncia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerReporteVideos">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerReporteVideos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiciosWeb">
+    <wsdl:port name="ServiciosWebSoap" binding="tns:ServiciosWebSoap">
+      <soap:address location="http://www.ciudadcontradelincuencia.somee.com/ServiciosWeb.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiciosWebSoap12" binding="tns:ServiciosWebSoap12">
+      <soap12:address location="http://www.ciudadcontradelincuencia.somee.com/ServiciosWeb.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

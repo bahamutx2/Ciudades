@@ -1,0 +1,5 @@
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\bin\Ciudad.dll
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\bin\Ciudad.pdb
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\obj\Debug\Ciudad.csprojResolveAssemblyReference.cache
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\obj\Debug\Ciudad.dll
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\obj\Debug\Ciudad.pdb

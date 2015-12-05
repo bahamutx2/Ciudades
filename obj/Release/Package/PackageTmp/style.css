@@ -1,0 +1,50 @@
+﻿.Menu {
+    width:100%;
+    text-align:center;
+}
+
+.SubMenu {
+    width:24%;
+    display:inline-block;
+    text-align:center;
+}
+
+.pnMenuSesi {
+    width: 40%;
+    margin: 10% auto;
+}
+
+.lbError {
+color: red;
+
+}
+
+.pnFiltros {
+    width:100%;
+}
+
+.pnFiltro {
+    margin-top: 2%;
+    display:inline-block;
+    width: 30%;
+}
+
+.pnResultados {
+    display:inline-block;
+    width: 100%;
+}
+
+.gvResultados {
+margin: 2% auto;
+}
+
+.sharebutton {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.pnBotones {
+    width: 80%;
+    margin: 2% auto;
+    text-align: center;
+}

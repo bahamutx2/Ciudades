@@ -1,0 +1,6 @@
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\bin\Ciudad.dll
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\bin\Ciudad.XmlSerializers.dll
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\bin\Ciudad.pdb
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\obj\Release\Ciudad.dll
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\obj\Release\Ciudad.pdb
+C:\Users\Néstor\Desktop\Ciudad\Ciudad\obj\Release\Ciudad.XmlSerializers.dll

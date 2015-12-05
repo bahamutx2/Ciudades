@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestra.master.cs" Inherits="Ciudad.Maestra" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="style.css" rel="stylesheet" />
+    
+    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+    <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php"
+           type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Panel ID="Panel1" runat="server" CssClass="Menu">
+                <h1>Ciudad contra la delincuencia</h1>
+            </asp:Panel>
+            <asp:Panel ID="Panel2"  runat="server" CssClass="Menu">
+                <asp:Label runat="server" CssClass="SubMenu" ID="smPerfil" Visible="False"><a href="Perfil.aspx">Perfil</a></asp:Label>
+                <asp:Label runat="server" CssClass="SubMenu" ID="smInformes" Visible="False"><a href="Informes.aspx">Informes</a></asp:Label>
+                <asp:Label runat="server" CssClass="SubMenu" ID="smVideos" Visible="True"><a href="Sitio.aspx">Sitio</a></asp:Label>
+                <asp:Label runat="server" CssClass="SubMenu" ID="smIniciar" Visible="True"><a href="Sesion.aspx">Iniciar sesion</a></asp:Label>
+                <asp:LinkButton ID="smCerrar2" CssClass="SubMenu" runat="server" Text="Cerrar Sesion" OnClick="smCerrar2_Click" Visible="false" />
+
+            </asp:Panel>
+        <asp:ScriptManager ID="script" runat="server" EnablePartialRendering="true">
+        </asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
